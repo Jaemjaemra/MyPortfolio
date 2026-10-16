@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth; /* <--- Kunci utama untuk buat animation jadi smooth */
+}
+/* Mengubah cursor untuk keseluruhan halaman website */
+/* Mengubah cursor untuk seluruh halaman menjadi bentuk 'help' atau 'grab' */
+/* Mengubah cursor untuk seluruh halaman website menggunakan gambar kustom */
+body {
+  cursor: url("https://www.flaticon.com/free-icon/winner_18986890"), auto;
+}
+
+/* Mengubah kursor saat diarahkan ke tombol, link, atau elemen yang bisa diklik */
+a,
+button,
+[role="button"],
+div[onClick] {
+ cursor: url('https://www.rw-designer.com/cursor-view/229192.png'), auto;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
