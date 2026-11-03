@@ -36,7 +36,22 @@
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
+/* DARK CHERRY THEME */
+:root[data-theme='dark'] {
+  color-scheme: dark;
 
+  --background: #19090D;
+  --surface: #2D0000;
+  --sage: #A83246;
+  --sage-light: #280905;
+  --pink: #C45A6B;
+  --pink-light: #830000;
+  --yellow: #A14646;
+  --brown: #F3DDE0;
+  --text: #F3DDE0;
+  --muted: #C7A7AE;
+  --border: #54202A;
+}
 * {
   box-sizing: border-box;
 }
@@ -120,12 +135,12 @@ textarea {
   margin: 20px 0;
 
   /*transparent fx*/
-  background: rgb(248 245 237, 0.55);
+background: color-mix(in srgb, var(--background) 75%, transparent);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
   /*soft border*/
-  border: 1px solid rgb(255 255 255, 0.65);
+border: 1px solid var(--border);
   border-radius: 24px;
 
   box-shadow: 
@@ -147,7 +162,7 @@ textarea {
   font-size: 30px;
 
   text-decoration: none;
-  color: #4A3B32;
+  color: var(--text);
 }
 
 .logo span {
@@ -193,7 +208,7 @@ textarea {
 }
 
 .nav-links a:hover {
-  color:#B87580;
+  color: var(--pink);
   text-shadow: 0 0 12px rgba(216, 162, 162, 0.65);
 }
 
@@ -300,8 +315,8 @@ textarea {
   padding: 13px 25px;
 
   color: #FFFFFF;
-  background: var(--sage);
-  border: 1px solid var(--sage);
+  background: var(--pink-light);
+border-color: var(--pink);
   border-radius: 999px;
 
   font-family: 'EB Garamond', serif;
@@ -692,8 +707,16 @@ textarea {
   transition: background 0.25s ease, border-color 0.25s ease;
 }
 
+.skill-flip-card:nth-child(3n + 1) .skill-flip-front {
+  background: var(--sage-light);
+}
+
 .skill-flip-card:nth-child(3n + 2) .skill-flip-front {
   background: var(--pink-light);
+}
+
+.skill-flip-card:nth-child(3n) .skill-flip-front {
+  background: var(--yellow);
 }
 
 .skill-flip-card:hover .skill-flip-front {
@@ -1273,5 +1296,293 @@ textarea {
   .social-icon:hover img {
     transform: none;
   }
+}
+
+/* ===== THEME VARIABLES ===== */
+
+:root {
+  color-scheme: light;
+
+  --page-bg: #F8F5ED;
+  --text-color: #4A3B32;
+  --card-bg: #FFFFFF;
+  --accent-color: #8EA66B;
+  --soft-accent: #D8A2A2;
+  --border-color: #E5DED2;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --page-bg: #19090D;
+  --text-color: #F3DDE0;
+  --card-bg: #2D0000;
+  --accent-color: #A83246;
+  --soft-accent: #6D0808;
+  --border-color: #54202A;
+}
+
+/* ===== APPLY THEME ===== */
+
+body {
+  background: var(--page-bg);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Add these variables to your existing elements
+   when styling their backgrounds, text and borders. */
+
+/* ===== SWITCH MODE ===== */
+
+.switch-mode {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 104px;
+  height: 52px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.switch-mode.light {
+  background: #FFF9D6;
+}
+
+.switch-mode.dark {
+  background: #2D0000;
+}
+
+.switch-knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  z-index: 1;
+}
+
+.switch-mode.dark .switch-knob {
+  background: #A83246;
+}
+
+.switch-icon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.sun-icon {
+  color: #8A6A30;
+}
+
+.moon-icon {
+  color: #A83246;
+}
+
+.switch-mode.dark .sun-icon {
+  color: #F3DDE0;
+}
+
+.switch-mode.dark .moon-icon {
+  color: #FFFFFF;
+}
+
+/* SPLIT BUTTON */
+.split-button-container {
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 60px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+}
+
+.split-main-button,
+.split-back-button,
+.split-option-button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  white-space: nowrap;
+  font: inherit;
+}
+
+.split-main-button {
+  position: absolute;
+  z-index: 2;
+  padding: 13px 28px;
+  border-radius: 999px;
+  background: var(--sage);
+  color: white;
+}
+
+.split-options {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.split-back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.split-option-button {
+  padding: 12px 20px;
+  border-radius: 999px;
+  transition: background 0.25s ease;
+}
+
+.split-back-button:hover,
+.split-option-button:hover {
+  background: var(--sage-light);
+}
+
+.split-main-button:focus-visible,
+.split-back-button:focus-visible,
+.split-option-button:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .split-options {
+    gap: 5px;
+  }
+
+  .split-option-button {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ==============================
+   ADD PROJECT FORM
+============================== */
+
+.project-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.project-form h3 {
+  margin: 0;
+  color: var(--text);
+}
+
+.project-form-category {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.project-form label {
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-form input,
+.project-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  color: var(--text);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font: inherit;
+}
+
+.project-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.project-form input:focus,
+.project-form textarea:focus {
+  outline: 2px solid var(--sage);
+  outline-offset: 2px;
+}
+
+.project-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.project-form-submit,
+.project-form-cancel {
+  padding: 11px 20px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.project-form-submit {
+  background: var(--sage);
+  color: white;
+}
+
+.project-form-cancel {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.project-form-submit:hover,
+.project-form-cancel:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .project-form {
+    padding: 20px;
+  }
+}
+
+/* PROJECT SECTION TITLE */
+.projects-section h2 {
+  color: var(--text);
 }
 
