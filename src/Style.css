@@ -408,15 +408,6 @@ border-color: var(--pink);
   gap: clamp(28px, 6vw, 75px);
 }
 
-.about-image-container {
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  overflow: hidden;
-  background: var(--pink-light);
-  border-radius: 48% 48% 12px 12px;
-}
-
 .profile-img {
   width: 100%;
   height: auto;
@@ -450,12 +441,11 @@ border-color: var(--pink);
   border-radius: 17px;
 }
 
-.banner-img {
+.portfolio-banner {
   width: 100%;
-  height: auto;
-  max-height: 620px;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
+  display: block;
 }
 
 /* =========================
@@ -1584,5 +1574,18 @@ body {
 /* PROJECT SECTION TITLE */
 .projects-section h2 {
   color: var(--text);
+}
+
+/* FIX DAY & NIGHT MODE TEXT COLOURS */
+
+.about-section h2,
+.skills-section h2,
+.skills-category h3 {
+  color: var(--text);
+}
+
+.about-section .section-description,
+.skills-section .section-description {
+  color: var(--muted);
 }
 

@@ -1,9 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
-
 import "./Style.css";
-
-import bannerImage from "./assets/Website Portfolio.png";
-
+import dayBanner from "./assets/banner-day.gif";
+import nightBanner from "./assets/banner-night.gif";
 import SwitchMode from "./components/SwitchMode";
 import SplitButton from "./components/SplitButton";
 
@@ -190,6 +188,8 @@ function App() {
     () => localStorage.getItem("portfolio-theme") === "dark"
   );
 
+  const currentBanner = isDark ? nightBanner : dayBanner;
+
   useEffect(() => {
     const theme = isDark ? "dark" : "light";
 
@@ -292,9 +292,9 @@ function App() {
       <header className="full-header">
         <div className="image-container">
           <img
-            src={bannerImage}
-            alt="Portfolio banner"
-            className="banner-img"
+            src={currentBanner}
+            alt="Floral portfolio banner"
+            className="portfolio-banner"
           />
         </div>
       </header>
