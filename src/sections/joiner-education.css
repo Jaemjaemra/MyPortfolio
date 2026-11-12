@@ -1,0 +1,149 @@
+
+.joiner-education {
+  position: relative;
+  min-height: 350vh;
+  padding: 0 !important;
+  overflow: clip;
+  background: #f8edf0;
+  color: #493b40;
+}
+
+.joiner-sticky {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 7%;
+  box-sizing: border-box;
+  gap: 35px;
+}
+
+.joiner-heading {
+  text-align: center;
+  z-index: 2;
+}
+
+.joiner-heading p {
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  color: #8b737d;
+  margin-bottom: 10px;
+}
+
+.joiner-heading h2 {
+  font-family: "EB Garamond", serif;
+  font-size: clamp(42px, 6vw, 76px);
+  font-weight: 500;
+  margin: 0;
+  color: #493b40;
+}
+
+.joiner-grid {
+  width: min(850px, 90vw);
+  aspect-ratio: 16 / 9;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border-radius: 18px;
+  perspective: 1000px;
+}
+
+.joiner-tile {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  will-change: transform, opacity;
+  transform-origin: center;
+}
+
+.joiner-education-card {
+  width: min(650px, 90vw);
+  text-align: center;
+  padding: 28px 35px;
+  border: 1px solid rgba(139, 115, 125, 0.25);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  opacity: 0;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.joiner-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #927681;
+  font-weight: 600;
+}
+
+.joiner-education-card h3 {
+  font-family: "EB Garamond", serif;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  margin: 12px 0;
+}
+
+.joiner-education-card > p:not(.joiner-label) {
+  color: #806d75;
+  margin-bottom: 25px;
+}
+
+.joiner-details {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.joiner-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.joiner-details span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #927681;
+}
+
+.joiner-details strong {
+  font-size: 19px;
+  font-weight: 600;
+  color: #493b40;
+}
+
+@media (max-width: 600px) {
+  .joiner-sticky {
+    padding: 50px 5%;
+    gap: 25px;
+  }
+
+  .joiner-grid {
+    width: 94vw;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+
+  .joiner-education-card {
+    padding: 22px 18px;
+  }
+
+  .joiner-details {
+    gap: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .joiner-tile {
+    will-change: auto;
+  }
+}
