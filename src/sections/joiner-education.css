@@ -121,6 +121,51 @@
   color: #493b40;
 }
 
+
+/* ============================= */
+/* DARK CHERRY THEME - EDUCATION */
+/* ============================= */
+
+[data-theme="dark"] .joiner-education {
+  background: #190D12;
+  color: #F3E8DF;
+}
+
+[data-theme="dark"] .joiner-heading p {
+  color: #A85F78;
+}
+
+[data-theme="dark"] .joiner-heading h2 {
+  color: #F3E8DF;
+}
+
+[data-theme="dark"] .joiner-education-card {
+  background: rgba(53, 18, 31, 0.88);
+  border: 1px solid rgba(168, 95, 120, 0.3);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .joiner-label {
+  color: #A85F78;
+}
+
+[data-theme="dark"] .joiner-education-card h3 {
+  color: #F3E8DF;
+}
+
+[data-theme="dark"] .joiner-education-card > p:not(.joiner-label) {
+  color: #D9B7BD;
+}
+
+[data-theme="dark"] .joiner-details span {
+  color: #A85F78;
+}
+
+[data-theme="dark"] .joiner-details strong {
+  color: #F3E8DF;
+}
+
+
 @media (max-width: 600px) {
   .joiner-sticky {
     padding: 50px 5%;
