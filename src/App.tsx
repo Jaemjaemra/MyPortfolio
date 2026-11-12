@@ -330,9 +330,10 @@ function App() {
         <h2>About Me</h2>
 
         <p className="section-description">
-          I am an Information Technology student who enjoys exploring
-          web development, game development and digital design. I like
-          learning new tools and turning ideas into interactive projects.
+          Hi! I'm Marsya Athirah, an Information Technology student based in Selangor, Malaysia.
+          I'm currently pursuing a Diploma in Information Technology at Politeknik METrO Kuala Lumpur.
+          I have an interest in web development, game development and digital design. I enjoy exploring new technologies, learning new skills and bringing creative ideas to life through projects.
+          I'm always looking forward to gaining new experiences and improving myself along the way.
         </p>
       </section>
 
