@@ -85,6 +85,17 @@ const defaultProjects: Project[] = [
     demo:
       "https://drive.google.com/file/d/15pTmDXDr_frvkyPod9rYgyZsw5R_5Fw1/view?usp=drive_link",
   },
+   {
+    id: "KopiLoka",
+    title: "KopiLoka",
+    category: "WEB DEVELOPMENT",
+    description:
+      "A cafe discovery and community platform where users can explore cafes, discover locations through an interactive map, save their favourite cafes and share cafe experiences.",
+    tech: ["React", "TypeScript", "CSS", "Vite", "Leaflet"],
+    website: "https://kopi-loka-three.vercel.app/",
+    demo:
+      "",
+  },
 ];
 
 // ==============================
